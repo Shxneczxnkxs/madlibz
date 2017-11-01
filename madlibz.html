@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app>
+  <head>
+
+  </head>
+  <body>
+    <div>
+      <label>MADLIBZ</label>
+      <input type="text" ng-model="yourAdjective" placeholder="Enter an adjective here">
+      <input type="text" ng-model="yourNoun" placeholder="Enter a noun here">
+      <input type="number" ng-model="yourAge" placeholder="Enter your age here">
+      <input type="text" ng-model="cooler" placeholder="Are you cool?">
+      <input type="text" ng-model="yourName" placeholder="Enter your name here">
+
+
+
+
+      <hr>
+      <h1> The
+        <span ng-if="yourAdjective">{{yourAdjective | uppercase}}</span>
+        <span ng-if="!yourAdjective">_______</span>
+        <span ng-if="yourNoun">{{yourNoun | uppercase}} </span>
+        <span ng-if="!yourNoun">_______</span>
+         is rad! {{yourNoun}} was born in
+         <span ng-if="yourAge">{{2017 - yourAge}} </span>
+         <span ng-if="!yourAge">_______.</span>
+        It's {{cooler==="yes" || yourNoun==="Shane"}}
+        that {{yourName | uppercase}} is cooler than {{yourNoun}}
+        <span ng-if="!yourNoun">_______.</span>
+
+      </h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  </body>
+</html>
